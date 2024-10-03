@@ -1,0 +1,18 @@
+[package]
+name = "nih_bevy_demo"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+# The `lib` artifact is needed for the standalone target
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug", rev = "dfafe90349aa3d8e40922ec031b6d673803d6432", features = ["standalone"] }
+nih_plug_bevy = { path = ".." }
+bevy_baseview = { path = "../../bevy_baseview_plugin"}
+bevy = { version = "0.14" }
+sickle_ui = "0.2.3"
+sickle_ui_scaffold = "0.2.3"
+
+atomic_float = "0.1"
